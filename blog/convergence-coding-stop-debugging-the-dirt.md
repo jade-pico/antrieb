@@ -22,7 +22,7 @@ Then comes the dirty environment problem. After a few rounds of testing, do you 
 
 That mismatch is what got me interested. Could infrastructure get the same kind of fast, clean feedback loop that software developers take for granted? Here is what that loop looks like when it is compressed: an agent provisions the cluster, wires the network, installs k3s, checks the result, and corrects course while the task is still fresh.
 
-(A compressed way of getting started with Antrieb on Claude.ai)[https://www.youtube.com/watch?v=8nts8oI-yeA]
+[A compressed way of getting started with Antrieb on Claude.ai](https://www.youtube.com/watch?v=8nts8oI-yeA)
 
 ## Antrieb
 
@@ -70,13 +70,13 @@ First the cluster: one SONiC switch, two LANs, three Ubuntu nodes wired through 
 
 Each stage is checked and saved before the next begins. When all three are verified, the LLM can run them end to end using the saved runbooks. For a full run, including the agent’s commands, checks, mistakes, and corrections, I saved the Claude Code execution trace here:
 
-(Full Sonic dual LAN network with k3s and nginx)[https://github.com/jade-pico/antrieb/blob/main/runs/sonic-dual-lan-k3s-nginx.md]
+[Full SONiC dual LAN network with k3s and nginx](https://github.com/jade-pico/antrieb/blob/main/runs/sonic-dual-lan-k3s-nginx.md)
 
 Convergence coding is different from vibe coding. Vibe coding can wander. Infrastructure has to converge. Antrieb exists to make that convergence loop fast enough that you actually use it.
 
 ## Try it
 
-To try it, add the MCP connector in Claude.ai as using this MCP url https://antrieb.sh/mcp. Follow the instructions at: (https://www.youtube.com/watch?v=8nts8oI-yeA)
+To try it, add the MCP connector in Claude.ai as using this MCP url https://antrieb.sh/mcp. Follow the instructions at: https://www.youtube.com/watch?v=8nts8oI-yeA
 
 
 For Claude Code or Codex, sign in at https://antrieb.sh/dash, get an API key, connect the MCP, and try the SONiC/k3s prompt above.
