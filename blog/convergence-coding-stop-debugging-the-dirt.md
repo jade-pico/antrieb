@@ -64,13 +64,9 @@ For example, you inspect the cluster and realize the LLM deployed one control pl
 
 Refinement is how larger systems become manageable. You give the LLM a smaller piece, get it right, save it as a runbook, and move on.
 
-First the cluster: one SONiC switch, two LANs, three Ubuntu nodes wired through separate NICs. Then k3s: installed on all three nodes, control plane also running as a worker. Then the application: nginx with anti-affinity across three pods, plus an ingress so the service is reachable from outside.
+First the cluster: one SONiC switch, two LANs, three Ubuntu nodes wired through separate NICs. Then k3s: installed on all three nodes, control plane also running as a worker. Then the application: nginx with anti-affinity across three pods, plus an ingress so the service is reachable from outside. Each stage is checked and saved before the next begins. When all three are verified, the LLM can run them end to end using the saved runbooks. 
 
-Each stage is checked and saved before the next begins. When all three are verified, the LLM can run them end to end using the saved runbooks. For a full run, including the agent’s commands, checks, mistakes, and corrections, I saved the Claude Code execution trace here:
-
-[Full SONiC dual LAN network with k3s and nginx](https://github.com/jade-pico/antrieb/blob/main/runs/sonic-dual-lan-k3s-nginx.md)
-
-Convergence coding is different from vibe coding. Vibe coding can wander. Infrastructure has to converge. Antrieb exists to make that convergence loop fast enough that you actually use it.
+These three steps substantively set apart convergence coding from vibe coding. Vibe coding can wander. Infrastructure has to converge. Antrieb exists to make that convergence loop fast enough that you actually use it. [See a full Antrieb run in this document](https://github.com/jade-pico/antrieb/blob/main/runs/sonic-dual-lan-k3s-nginx.md).
 
 ## Try it
 
