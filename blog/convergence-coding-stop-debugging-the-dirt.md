@@ -46,7 +46,7 @@ An LLM can produce plausible Ansible, plausible bash, or plausible network confi
 
 The LLM proposes a system: these machines, these NICs, these networks, these commands, this cluster state. That hypothesis might be right. It might be subtly wrong. It might satisfy the prompt while missing the intent.
 
-**Convergence coding is the loop around that hypothesis: conformance checking, completeness checking, and refinement.**
+**Convergence coding is the loop of generating an infrastructure hypothesis, testing it against reality (conformance & completeness), and refining it until the system matches intent.**
 
 ### Conformance checking
 
