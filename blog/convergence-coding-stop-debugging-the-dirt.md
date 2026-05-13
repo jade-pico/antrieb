@@ -1,4 +1,5 @@
 # Convergence Coding: Stop Debugging the Dirt
+![Stop Debugging the Dirt]([URL or Path](https://github.com/jade-pico/antrieb/blob/main/images/debugging-the-dirt.png)
 
 The first time I tried vibe coding, I wondered what it would look like for infrastructure. Real infrastructure: bash, Ansible, switches, LANs, NICs, clusters. I wanted to type what I meant and get working infrastructure back.
 
