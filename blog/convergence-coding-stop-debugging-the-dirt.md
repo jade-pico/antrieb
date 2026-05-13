@@ -27,7 +27,7 @@ That question turned into seven months of work. The result is Antrieb, German fo
 
 In plain terms, Antrieb gives an AI agent or LLM a fast, disposable lab where it can build and test real infrastructure. It is an MCP server that lets LLMs and agents create VM-based infrastructure: routers, switches, NICs, individual VMs, and small VM clusters. 
 
-The two properties I found critical to focus on are fidelity and speed:
+Two properties matter most:
 
 1. Fidelity: fidelity means the environment behaves enough like real infrastructure for the result to mean something. A huge part of computing systems still runs in VMs. A huge part of networking, edge systems, appliance software, programmable switches, routers, firewalls, and real-world infrastructure is still best represented in VMs.
 
@@ -71,8 +71,8 @@ These three steps substantively set apart convergence coding from vibe coding. V
 
 ## Try it
 
-The simples way to try Antrieb is by adding an MCP connector in Claude.ai(https://claude.ai).  Use the MCP url https://antrieb.sh/mcp. [See a demo here](https://www.youtube.com/watch?v=8nts8oI-yeA)
+The simplest way to try Antrieb is by adding an MCP connector in Claude.ai(https://claude.ai).  Use the MCP url https://antrieb.sh/mcp. [See a demo here](https://www.youtube.com/watch?v=8nts8oI-yeA)
 
 For more than trying,  Claude Code and Codex provide the best user experience with exceptional wall time for calling the tools. Login with your [Google](https://antrieb.sh/dash), get an API key, connect the MCP, and try the SONiC/k3s prompt above. [See detailed instructions here](https://github.com/jade-pico/antrieb-mcp-server)
 
-I am curious what people build with it, what breaks, and where the loop still feels too slow.
+I am curious what people build with it, what breaks, and where the loop still feels too slow. Whether Antrieb actually delivers on the prompt I started with is something you can decide for yourself in a few minutes.
