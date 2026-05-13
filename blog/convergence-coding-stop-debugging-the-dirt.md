@@ -24,13 +24,15 @@ That mismatch is what got me interested. Could infrastructure get the same kind 
 
 That question turned into seven months of work. The result is Antrieb, German for drive or propulsion.
 
-In plain terms, Antrieb gives an AI agent or LLM a fast, disposable lab where it can build and test real infrastructure. It is an MCP server that lets LLMs and agents create VM-based infrastructure: routers, switches, NICs, individual VMs, and small VM clusters. The two properties I care about most are fidelity and speed.
+In plain terms, Antrieb gives an AI agent or LLM a fast, disposable lab where it can build and test real infrastructure. It is an MCP server that lets LLMs and agents create VM-based infrastructure: routers, switches, NICs, individual VMs, and small VM clusters. 
 
-Fidelity means the environment behaves enough like real infrastructure for the result to mean something. A huge part of computing systems still runs in VMs. A huge part of networking, edge systems, appliance software, programmable switches, routers, firewalls, and real-world infrastructure is still best represented in VMs.
+The two properties I found critical to focus on are fidelity and speed:
 
-Speed matters because fidelity alone does not give you a usable loop. If every attempt takes too long, you stop iterating. You start trying to be right up front instead of using the loop to discover what is wrong.
+1. Fidelity: fidelity means the environment behaves enough like real infrastructure for the result to mean something. A huge part of computing systems still runs in VMs. A huge part of networking, edge systems, appliance software, programmable switches, routers, firewalls, and real-world infrastructure is still best represented in VMs.
 
-Getting fidelity and speed together is the hard part. High fidelity usually means more setup, more state, more boot time, more moving parts. Speed usually comes from simplifying those things away.
+2. Speed: speed matters because fidelity alone does not give you a usable loop. If every attempt takes too long, you stop iterating. You start trying to be right up front instead of using the loop to discover what is wrong.
+
+Getting fidelity and speed together is the hard part. High fidelity is costly and usually means more setup, more state, more boot time, more moving parts. Speed usually comes from simplifying those things away.
 
 Getting to subsecond launch took a while. I tried a number of techniques: kernel IP injection, Kernel Samepage Merging (KSM), microVMs, Kata Containers, Firecracker, and direct kernel boot. Snapshotting was the one that gave me the speed and scalability across the distro and version landscape. Now, a 4-node cluster launches in under 2 seconds. On the networking side, Antrieb uses OpenVSwitch, which gives the LLM the flexibility to wire up a wide variety of networks: different topologies, NIC layouts, and isolation patterns, rather than being locked into one shape.
 
