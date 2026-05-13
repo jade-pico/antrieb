@@ -2,7 +2,7 @@
 
 A 3-node k3s cluster spread across two physically separated LANs, routed by a SONiC switch. nginx runs with `requiredDuringSchedulingIgnoredDuringExecution` pod anti-affinity so each replica lands on a different node — and therefore spans both LANs.
 
-Built on [Antrieb](https://antrieb.dev). Cluster provisioned in **946 ms**; total wall time end-to-end including k3s install, nginx rollout, and verification was a couple of minutes.
+Built on [Antrieb](https://antrieb.sh/dash). Cluster provisioned in **946 ms**; total wall time end-to-end including k3s install, nginx rollout, and verification was a couple of minutes.
 
 ## Topology
 
@@ -10,12 +10,12 @@ Built on [Antrieb](https://antrieb.dev). Cluster provisioned in **946 ms**; tota
                        ┌──────────────────────┐
                        │      node1 (SONiC)   │
                        │                      │
-              eth0 ┌───┤ 10.10.1.254/24       │
-                   │   │ 10.10.2.254/24 ├──┐ eth1
-                   │   │ ip_forward=1     │  │
-                   │   └──────────────────┘  │
-                   │                          │
-        ┌──────────┴──────────┐    ┌──────────┴──────────┐
+              eth0 ┌───┤ 10.10.1.254/24       │──┐
+                   │   │ 10.10.2.254/24       │  │eth1
+                   │   │ ip_forward=1         │  │
+                   │   └──────────────────────┘  │
+                   │                             │
+        ┌──────────┴──────────┐    ┌─────────────┴───────┐
         │       lan-a         │    │       lan-b         │
         │  10.10.1.0/24 DHCP  │    │  10.10.2.0/24 DHCP  │
         └──────┬──────┬───────┘    └──────────┬──────────┘
