@@ -21,6 +21,7 @@ Then comes the dirty environment problem. After a few rounds of testing, do you 
 
 That mismatch is what got me interested. Could infrastructure get the same kind of fast, clean feedback loop that software developers take for granted? [Here is what that loop looks like when it is compressed: an agent provisions the cluster, wires the network, installs k3s, checks the result, and corrects course while the task is still fresh.](https://www.youtube.com/watch?v=8nts8oI-yeA)
 
+![Multi Subnet K3S Cluster](https://github.com/jade-pico/antrieb/blob/main/images/multi-subnet-k3s-cluster.png)
 ## Antrieb
 
 That question turned into seven months of work. The result is Antrieb, German for drive or propulsion.
