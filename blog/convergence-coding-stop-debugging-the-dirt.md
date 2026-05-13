@@ -70,7 +70,7 @@ These three steps substantively set apart convergence coding from vibe coding. V
 
 ## Try it
 
-To try it, add the MCP connector in Claude.ai as using this MCP url https://antrieb.sh/mcp. Follow the instructions at: https://www.youtube.com/watch?v=8nts8oI-yeA
+To try Antrieb, add the MCP connector in https://claude.ai using the MCP url https://antrieb.sh/mcp. [See a demo here](https://www.youtube.com/watch?v=8nts8oI-yeA)
 
 
 For Claude Code or Codex, sign in at https://antrieb.sh/dash, get an API key, connect the MCP, and try the SONiC/k3s prompt above.
