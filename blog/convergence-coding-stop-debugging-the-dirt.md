@@ -80,4 +80,4 @@ For more than trying,  Claude Code and Codex provide the best user experience wi
 
 I am curious what people build with it, what breaks, and where the loop still feels too slow. Whether Antrieb actually delivers on the prompt I started with is something you can decide for yourself in a few minutes.
 
-Contact us: (jade.pico@antrieb.sh)
+Contact us: jade.pico@antrieb.sh
