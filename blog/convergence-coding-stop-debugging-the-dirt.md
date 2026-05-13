@@ -7,7 +7,10 @@ Something like:
 
 > Create a network with one SONiC switch and two separate LANs. In one LAN, add two Ubuntu nodes. In the other, add one Ubuntu node. Install k3s on all three nodes and configure them as a single cluster. Install nginx with anti-affinity across three pods. Use DHCP. Make sure the LANs are physically separated through separate NICs. Test everything.
 
-The appeal was obvious, especially because networking is not my strongest area. Though, the problem is not only that infrastructure is hard for me: the infrastructure coding loop is broken.
+The architecture diagram of this pompt is depicted below:
+![Multi Subnet K3S Cluster](https://github.com/jade-pico/antrieb/blob/main/images/multi-subnet-k3s-cluster.png)
+
+The appeal of a vibe coding-like process for Infra was obvious, especially because networking is not my strongest area. Though, the problem is not only that infrastructure is hard for me: the infrastructure coding loop is broken.
 
 ## The missing loop
 
@@ -21,7 +24,6 @@ Then comes the dirty environment problem. After a few rounds of testing, do you 
 
 That mismatch is what got me interested. Could infrastructure get the same kind of fast, clean feedback loop that software developers take for granted? [Here is what that loop looks like when it is compressed: an agent provisions the cluster, wires the network, installs k3s, checks the result, and corrects course while the task is still fresh.](https://www.youtube.com/watch?v=8nts8oI-yeA)
 
-![Multi Subnet K3S Cluster](https://github.com/jade-pico/antrieb/blob/main/images/multi-subnet-k3s-cluster.png)
 ## Antrieb
 
 That question turned into seven months of work. The result is Antrieb, German for drive or propulsion.
