@@ -6,15 +6,13 @@ Something like:
 
 > Create a network with one SONiC switch and two separate LANs. In one LAN, add two Ubuntu nodes. In the other, add one Ubuntu node. Install k3s on all three nodes and configure them as a single cluster. Install nginx with anti-affinity across three pods. Use DHCP. Make sure the LANs are physically separated through separate NICs. Test everything.
 
-The appeal was obvious, especially because networking is not my strongest area. I know enough to get things working, but not always enough to confidently review whatever an LLM gives me when the task involves switches, NICs, LANs, and physical separation. The problem is not only that infrastructure is harder to review. The problem is that the feedback loop is wrong.
+The appeal was obvious, especially because networking is not my strongest area. Though, the problem is not only that infrastructure is hard for me: the infrastructure coding loop is borken.
 
 ## The missing loop
 
-For a lot of modern application development, the loop has become almost invisible. With Node.js, Spring Boot, and similar stacks, you often do not even think about “running” the thing anymore. You save a file, live reload picks it up, the app redeploys, and the result is in front of you. Infrastructure has improved too. Infrastructure as code made systems more repeatable, reviewable, and automatable.
+For a lot of modern application development, the loop has become almost invisible. With Node.js, Spring Boot, and similar stacks, you often do not even think about “running” the thing anymore. You save a file, live reload picks it up, the app redeploys, and the result is in front of you. 
 
-The loop is still usually measured in tens of minutes or more.
-
-Infrastructure work often has to create the world before it can test the world. You do not just run code. You provision machines, attach NICs, wire networks, boot operating systems, wait for services, configure dependencies, and only then discover whether the system matches the intent.
+Infrastructure has improved too. Infrastructure as code made systems more repeatable, reviewable, and automatable, yet the loop is still usually measured in tens of minutes or more. Infrastructure work often has to create the world before it can test the world. You do not just run code. You provision machines, attach NICs, wire networks, boot operating systems, wait for services, configure dependencies, and only then discover whether the system matches the intent.
 
 Then comes the dirty environment problem. After a few rounds of testing, do you rebuild everything from scratch and pay the time cost again? Or do you keep iterating on an environment that may already contain leftovers from previous attempts? Every failed attempt can leave residue: modified config, stale leases, changed routes, half-installed packages, old cluster state, broken services, orphaned files.
 
