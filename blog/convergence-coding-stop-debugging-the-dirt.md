@@ -71,7 +71,7 @@ These three steps substantively set apart convergence coding from vibe coding. V
 
 ## Try it
 
-The simplest way to try Antrieb is by adding an MCP connector in Claude.ai(https://claude.ai).  Use the MCP url https://antrieb.sh/mcp. [See a demo here](https://www.youtube.com/watch?v=8nts8oI-yeA)
+The simplest way to try Antrieb is by adding an MCP connector in [Claude.ai](https://claude.ai).  Use the Antrieb MCP url: https://antrieb.sh/mcp. [See a demo here](https://www.youtube.com/watch?v=8nts8oI-yeA)
 
 For more than trying,  Claude Code and Codex provide the best user experience with exceptional wall time for calling the tools. Login with your [Google](https://antrieb.sh/dash), get an API key, connect the MCP, and try the SONiC/k3s prompt above. [See detailed instructions here](https://github.com/jade-pico/antrieb-mcp-server)
 
